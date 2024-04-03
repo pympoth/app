@@ -5,10 +5,18 @@
     </div>
     <div class="menu">
       <ul>
-        <li><span>🏠</span><NuxtLink to="/">Главная</NuxtLink></li>
-        <li><span>📚</span><NuxtLink to="/courses">Курсы</NuxtLink></li>
-        <li><span>📒</span><NuxtLink to="/tasks">Задания</NuxtLink></li>
-        <li><span>🙎‍♂️</span><NuxtLink to="/profile">Профиль</NuxtLink></li>
+        <li>
+          <NuxtLink to="/"><span>🏠</span><span>Главная</span></NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/courses"><span>📚</span><span>Курсы</span></NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/tasks"><span>📒</span><span>Задания</span></NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/profile"><span>🙎‍♂️</span><span>Профиль</span></NuxtLink>
+        </li>
       </ul>
     </div>
   </div>
@@ -24,6 +32,11 @@
 }
 .page {
   position: absolute;
+  bottom: 85px;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: auto;
 }
 .menu {
   position: absolute;
@@ -31,6 +44,9 @@
   left: 0;
   right: 0;
   top: 835px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .menu ul {
   display: flex;
@@ -40,7 +56,7 @@
   list-style: none;
   justify-content: space-evenly;
 }
-.menu ul li {
+.menu ul span {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
