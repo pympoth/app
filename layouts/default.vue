@@ -1,3 +1,17 @@
+<script setup>
+const menuText = ref("index");
+
+const route = useRoute()
+console.log(route.name)
+
+menuText.value = route.name
+
+function activeMenu(name) {
+  menuText.value = name
+}
+</script>
+
+
 <template>
   <div class="screen">
     <div class="page">
@@ -5,16 +19,16 @@
     </div>
     <div class="menu">
       <ul>
-        <li>
+        <li v-bind:class="menuText === 'index' ? 'active' : ''" v-on:click="activeMenu('index')">
           <NuxtLink to="/"><span>🏠</span><span>Главная</span></NuxtLink>
         </li>
-        <li>
+        <li v-bind:class="menuText === 'courses' ? 'active' : ''" v-on:click="activeMenu('courses')">
           <NuxtLink to="/courses"><span>📚</span><span>Курсы</span></NuxtLink>
         </li>
-        <li>
+        <li v-bind:class="menuText === 'tasks' ? 'active' : ''" v-on:click="activeMenu('tasks')">
           <NuxtLink to="/tasks"><span>📒</span><span>Задания</span></NuxtLink>
         </li>
-        <li>
+        <li v-bind:class="menuText === 'profile' ? 'active' : ''" v-on:click="activeMenu('profile')">
           <NuxtLink to="/profile"><span>🙎‍♂️</span><span>Профиль</span></NuxtLink>
         </li>
       </ul>
@@ -60,6 +74,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+}
+.active a {
+  color: rgb(24, 70, 255);
+}
+a{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 </style>
