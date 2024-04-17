@@ -3,9 +3,11 @@ export default defineEventHandler((event) => {
         lastname: "Иванов",
         name: "Иван",
         middlename: "Иванович",
+        phonenumber: 79887656077.,
+        location: "Г.Волгодонск , п-р.Строителей 8б , квартира 43. ",
         education: [
             {
-                type: "Средннее-профуссиональное образование",
+                type: "Средннее-профессиональное образование",
                 name: "ФГАОУ ГИУК ВРАП",
                 qualify: "Техник"
             },
@@ -30,7 +32,7 @@ export default defineEventHandler((event) => {
         ],
         certificates: [
             {
-name: ""
+                name: ""
             },
         ]
 

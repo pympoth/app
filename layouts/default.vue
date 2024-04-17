@@ -38,7 +38,7 @@ function activeMenu(name) {
 <style scoped>
 .screen {
   widows: 414px;
-  background: #dddddd;
+  background: #fff;
   height: 896px;
   margin: 0 auto;
   border-radius: 5px;
@@ -51,6 +51,7 @@ function activeMenu(name) {
   right: 0;
   top: 0;
   overflow: auto;
+  background: #fff;
 }
 .menu {
   position: absolute;
@@ -61,6 +62,7 @@ function activeMenu(name) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #fff;
 }
 .menu ul {
   display: flex;
