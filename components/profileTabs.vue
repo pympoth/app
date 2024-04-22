@@ -100,6 +100,9 @@ li {
   top: 10px;
   border-radius: 10px;
 }
+.info a{
+  color: rgb(7, 107, 193);
+}
 .active {
   background: #61c2fa6e;
 }
