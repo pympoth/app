@@ -48,13 +48,37 @@ if (weatherSymbols.hasOwnProperty(descWeather)) {
     <div class="circle"></div>
     <div class="circles"></div>
   </div>
+
   <div class="calendar">
-    <h3>Завтра в 8:00:</h3>
-    <p class="p1">Начало уроков</p>
-    <div class="string"></div>
-    <h3 class="h3">Завтра в 13:30:</h3>
-    <p class="p2">Конец уроков</p>
-        <div class="string"></div>
+    <div class="day">
+      <h2 class="h5">Понедельник 6 мая</h2>
+      <div class="lesson">
+        Учёба
+        <p>8:00</p>
+      </div>
+      <div class="lesson">
+        Веб дизайн
+        <p>18:00</p>
+      </div>
+    </div>
+    <div class="day">
+      <h2 class="h2">Вторник 7 мая</h2>
+      <div class="lesson">
+        Учеба
+        <p>8:00</p>
+      </div>
+    </div>
+    <div class="day">
+      <h2 class="h4">Среда 8 мая</h2>
+      <div class="lesson">
+        Учёба
+        <p>8:00</p>
+      </div>
+      <div class="lesson">
+        Веб дизайн
+        <p>18:00</p>
+      </div>
+    </div>
   </div>
 </template>
 <script scoped>
@@ -108,31 +132,43 @@ if (weatherSymbols.hasOwnProperty(descWeather)) {
   border: 3px solid blue;
   border-radius: 15px;
   padding: 5px;
-  position: relative;
   overflow: hidden;
   background: #add2ff;
-}
-.p1 {
-  position: relative;
-  top: -20px;
 }
 .string {
   border: 3px solid blue;
   border-radius: 15px;
   padding: 0px;
-  position: relative;
   overflow: hidden;
   background: #add2ff;
-  top: -30px;
+  top: -70px;
   width: 400px;
   right: 10px;
 }
-.h3 {
-  position: relative;
-  top: -40px;
+.lesson {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  height: 35px;
 }
-.p2 {
-  position: relative;
-  top: -60px;
+.string1 {
+  border: 3px solid blue;
+  border-radius: 15px;
+  padding: 0px;
+  overflow: hidden;
+  background: #add2ff;
+  top: -70px;
+  width: 400px;
+  right: 10px;
+}
+
+
+.day {
+  border-bottom: 1px solid blue;
+}
+.day:last-child{
+  border: none;
 }
 </style>
